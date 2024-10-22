@@ -21,6 +21,15 @@ pipeline {
 				'''
 			}
 		}
+
+        stage('composer runner'){
+			steps {
+				sh '''
+                composer install
+         		'''
+			}
+		}
+
         stage('artisan runner'){
 			steps {
 				sh '''
@@ -30,7 +39,7 @@ pipeline {
 			}
 		}
 
-        stage('composer runner'){
+        stage('docker runner'){
 			steps {
 				sh '''
 				docker compose down
