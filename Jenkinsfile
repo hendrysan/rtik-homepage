@@ -42,11 +42,11 @@ pipeline {
         stage('docker runner'){
 			steps {
 				sh '''
-				docker-compose down && docker-compose up -d --force-recreate
+				docker-compose down && docker-compose up
 				'''
-                sh '''
-				echo 'Push Image Completed'
-				'''
+                // sh '''
+				// echo 'Push Image Completed'
+				// '''
 			}
 		}
 	}
