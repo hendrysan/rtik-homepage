@@ -29,7 +29,8 @@
 
     <!-- Core CSS -->
     <link rel="stylesheet" href="../../cms-assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="../../cms-assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="../../cms-assets/vendor/css/rtl/theme-default.css"
+        class="template-customizer-theme-css" />
     <link rel="stylesheet" href="../../cms-assets/css/demo.css" />
 
     <!-- Vendors CSS -->
@@ -1637,7 +1638,8 @@
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
                                     <div class="avatar avatar-online">
-                                        <img src="../../cms-assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
+                                        <img src="../../cms-assets/img/avatars/1.png" alt
+                                            class="h-auto rounded-circle" />
                                     </div>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
@@ -1701,10 +1703,16 @@
                                         <div class="dropdown-divider"></div>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="{{ route('logout') }}" target="_blank">
+                                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
                                             <i class="ti ti-logout me-2 ti-sm"></i>
                                             <span class="align-middle">Log Out</span>
                                         </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            class="d-none">
+                                            @csrf
+                                        </form>
                                     </li>
                                 </ul>
                             </li>
