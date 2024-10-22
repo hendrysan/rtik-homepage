@@ -30,14 +30,14 @@ pipeline {
 			}
 		}
 
-        // stage('artisan runner'){
-		// 	steps {
-		// 		sh '''
-        //         php artisan migrate --force
-        //         php artisan optimize:clear
-        //  		'''
-		// 	}
-		// }
+        stage('artisan runner'){
+			steps {
+				sh '''
+                php artisan migrate --force
+                php artisan optimize:clear
+         		'''
+			}
+		}
 
         stage('docker runner'){
 			steps {
