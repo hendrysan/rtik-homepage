@@ -41,7 +41,8 @@ pipeline {
 
         stage('docker runner'){
 			steps {
-				sh ./compose.sh
+                sh "chmod +x -R ${env.WORKSPACE}"
+                sh './compose.sh'
 
                 // sh '''
 				// echo 'Push Image Completed'
