@@ -36,6 +36,9 @@ RUN composer install --no-scripts
 #RUN npm install
 #RUN composer dump-autoload
 
+RUN php artisan migrate
+RUN php artisan optimize:clear
+
 RUN useradd -G www-data,root -u $uid -d /home/$user $user
 RUN mkdir -p /home/$user/.composer && \
     chown -R $user:$user /home/$user
