@@ -41,7 +41,7 @@ pipeline {
 
         stage('docker runner'){
 			steps {
-                sh "chmod +x -R ${env.WORKSPACE}"
+                sh "chmod -R 777 ./compose.sh"
                 sh './compose.sh'
 
                 // sh '''
