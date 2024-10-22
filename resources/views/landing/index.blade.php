@@ -62,7 +62,7 @@
             <!-- NAVIGATION LINKS -->
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#slider" class="smoothScroll">Home</a></li>
+                    <li><a href="#slider" class="smoothScroll">Home Test</a></li>
                     <li><a href="#about" class="smoothScroll">About</a></li>
                     <li><a href="#service" class="smoothScroll">Service</a></li>
                     <li><a href="#work" class="smoothScroll">Work</a></li>
