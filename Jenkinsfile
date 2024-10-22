@@ -42,7 +42,7 @@ pipeline {
         stage('docker runner'){
 			steps {
 				sh '''
-				docker-compose down && docker-compose up
+				./compose.sh
 				'''
                 // sh '''
 				// echo 'Push Image Completed'
