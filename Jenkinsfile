@@ -33,7 +33,7 @@ pipeline {
         stage('artisan runner'){
 			steps {
 				sh '''
-                php artisan migrate:refresh
+                php artisan migrate --force
                 php artisan optimize:clear
          		'''
 			}
